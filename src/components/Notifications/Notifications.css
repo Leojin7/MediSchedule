@@ -1,0 +1,209 @@
+.notifications-container {
+  padding: var(--space-md) 0;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--space-md) 0;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+}
+
+.notifications-count {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.notification-card {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--glass-border);
+  transition: all var(--animation-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevation);
+}
+
+.notification-card.unread {
+  border-left: 4px solid var(--primary-blue);
+}
+
+.notification-card.unread::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--medical-primary);
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.notification-icon.info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.notification-icon.warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.notification-icon.success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.notification-icon.error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3xs);
+}
+
+.notification-header h3 {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.notification-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4xs);
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.notification-message {
+  margin: 0 0 var(--space-3xs) 0;
+  color: var(--dark-gray);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.notification-patient {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.notification-patient svg {
+  flex-shrink: 0;
+}
+
+.notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  align-self: flex-start;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: var(--medium-gray);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: var(--space-4xs) var(--space-3xs);
+  border-radius: var(--radius-md);
+  transition: all var(--animation-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4xs);
+}
+
+.action-button:hover {
+  background: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.action-button.delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error-red);
+}
+
+.no-notifications {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  border: 1px dashed var(--light-gray);
+  margin: var(--space-md) 0;
+}
+
+.no-notifications h3 {
+  color: var(--dark-gray);
+  margin: var(--space-sm) 0 var(--space-3xs) 0;
+}
+
+.no-notifications p {
+  color: var(--medium-gray);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3xs);
+  }
+  
+  .notification-time {
+    align-self: flex-end;
+  }
+  
+  .notification-actions {
+    flex-direction: row;
+    align-self: auto;
+  }
+  
+  .notifications-header {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+}

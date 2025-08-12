@@ -1,0 +1,39 @@
+/* Dark Mode Styles for Sidebar */
+[data-theme="dark"] .sidebar {
+  background: linear-gradient(160deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .sidebar-header h2 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .sidebar-header p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .nav-item {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+[data-theme="dark"] .nav-item.active {
+  background: var(--medical-primary);
+  color: white;
+}
+
+[data-theme="dark"] .sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .sidebar-footer .footer-content {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .sidebar-footer .footer-subtext {
+  color: rgba(255, 255, 255, 0.5);
+}

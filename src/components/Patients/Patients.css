@@ -1,0 +1,198 @@
+.patients-container {
+  padding: var(--space-md) 0;
+}
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.patient-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+  transition: all var(--animation-smooth);
+}
+
+.patient-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevation);
+}
+
+.patient-header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-md);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.patient-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--medical-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #083344;
+  margin-right: var(--space-sm);
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.patient-info h3 {
+  margin: 0 0 var(--space-4xs) 0;
+  color: var(--dark-gray);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.patient-age {
+  color: var(--medium-gray);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.patient-details {
+  padding: var(--space-md);
+}
+
+.patient-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  padding: var(--space-xs);
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.patient-operations h4 {
+  margin-top: 0;
+  color: var(--dark-gray);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.operation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3xs) 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.operation-item:last-child {
+  border-bottom: none;
+}
+
+.operation-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-type {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.operation-date {
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.operation-status {
+  padding: var(--space-4xs) var(--space-xs);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.operation-status.status-scheduled {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.operation-status.status-in-progress {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.operation-status.status-completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.operation-status.status-cancelled {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.more-operations {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--medium-gray);
+  padding: var(--space-3xs) 0;
+}
+
+.patient-actions {
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.patient-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .patients-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .patient-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .patient-avatar {
+    margin-right: 0;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .patient-stats {
+    flex-direction: column;
+  }
+}
