@@ -1,8 +1,4 @@
 
----
-
-# **README for MediSchedule** 🏥  
-```markdown
 # MediSchedule 🏥  
 *A Smart Operation Scheduler for Hospitals*  
 
