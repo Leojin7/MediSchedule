@@ -9,6 +9,7 @@ export interface Operation {
   scheduledTime: string;
   duration: number; 
   status: 'Scheduled' | 'In Progress' | 'Completed' | 'Cancelled';
+  
   priority: 'Low' | 'Medium' | 'High' | 'Emergency';
   notes?: string;
 }
