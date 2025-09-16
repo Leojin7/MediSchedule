@@ -13,6 +13,7 @@ export interface Operation {
   priority: 'Low' | 'Medium' | 'High' | 'Emergency';
   
   
+  
   notes?: string;
 }
 
