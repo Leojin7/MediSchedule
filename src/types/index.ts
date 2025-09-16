@@ -7,7 +7,7 @@ export interface Operation {
   operationRoom: string;
   scheduledDate: Date;
   scheduledTime: string;
-  duration: number; // in hours
+  duration: number; 
   status: 'Scheduled' | 'In Progress' | 'Completed' | 'Cancelled';
   priority: 'Low' | 'Medium' | 'High' | 'Emergency';
   notes?: string;
