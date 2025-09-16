@@ -11,9 +11,7 @@ export interface Operation {
   status: 'Scheduled' | 'In Progress' | 'Completed' | 'Cancelled';
   
   priority: 'Low' | 'Medium' | 'High' | 'Emergency';
-  
-  
-  
+
   notes?: string;
 }
 
